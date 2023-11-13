@@ -14,7 +14,11 @@ function renderCartContents() {
         const productId = this.getAttribute('data-id');
         removeFromCart(productId);
       });
-    });
+   
+  
+  if (cartItems !== null) {
+    const htmlItems = cartItems.map((item) => cartItemTemplate(item));
+    document.querySelector(".product-list").innerHTML = htmlItems.join("");
   }
 }
 
