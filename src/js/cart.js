@@ -8,7 +8,6 @@ function renderCartContents() {
     const htmlItems = cartItems.map((item) => cartItemTemplate(item)).join("");
     productList.innerHTML = htmlItems;
 
-    // Add event listeners to the remove buttons (X icons)
     const removeButtons = document.querySelectorAll('.remove-item');
     removeButtons.forEach(button => {
       button.addEventListener('click', function () {
@@ -42,7 +41,7 @@ function removeFromCart(productId) {
   if (cartItems !== null) {
     const updatedCart = cartItems.filter(item => item.ProductId !== productId);
     localStorage.setItem("so-cart", JSON.stringify(updatedCart));
-    renderCartContents(); // Re-render the cart after removing an item
+    renderCartContents();
   }
 }
 
