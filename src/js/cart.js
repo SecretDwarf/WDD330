@@ -5,7 +5,7 @@ function renderCartContents() {
   const productList = document.querySelector(".product-list");
 
   if (cartItems !== null) {
-    const htmlItems = cartItems.map((item) => cartItemTemplate(item)).join("");
+    const htmlItems = cartItems.map((item) => cartItemTemplate(item));
     productList.innerHTML = htmlItems;
 
     const removeButtons = document.querySelectorAll('.remove-item');
