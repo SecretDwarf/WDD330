@@ -1,5 +1,5 @@
 import ProductData from "./ProductData.mjs";
-import ProductList from "./ProductListing.mjs";
+import ProductList from "./ProductList.mjs";
 import { loadHeaderFooter } from "./utils.mjs";
 
 loadHeaderFooter();
