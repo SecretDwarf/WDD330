@@ -1,8 +1,10 @@
-import { getParam } from "./utils.mjs";
-import ProductData from "./ProductData.mjs";
+import { getParam, loadHeaderFooter } from "./utils.mjs";
+import ExternalServices from "./ExternalServices.mjs";
 import ProductDetails from "./ProductDetails.mjs";
 
-const dataSource = new ProductData("tents");
+loadHeaderFooter();
+
+const dataSource = new ExternalServices("tents");
 const productId = getParam("product");
 
 const product = new ProductDetails(productId, dataSource);
